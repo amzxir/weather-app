@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Layouts from './component/layouts';
-import axios from "axios";
+import Context from './context/context';
 
 export default function App() {
 
@@ -21,27 +21,42 @@ export default function App() {
   }, []);
   // end find location user
 
-  // start find sunrice and sunset
-  console.log(location)
-  const [sun , setSun] = useState();
+  // start fetch data staus day
+  const [statusDay, setStatusDay] = useState();
+  // end fetch data staus day
+
+  // start get time 
+  const [time, setTime] = useState(new Date());
+
   useEffect(() => {
-    const handleSun = async() => {
-      try {
-        const response = await axios.get('https://api.sunrisesunset.io/json?lat=35.6709634&lng=-51.3406765');
-        console.log(response);
-      } catch (error) {
-        console.error(error);
+    setInterval(() => {
+      setTime(new Date());
+    }, 1000);
+  }, [])
+  // end get time 
+
+  const [status , setStatus] = useState("");
+  useEffect(() => {
+    const handleCheckDay = async() => {
+      if (time.toLocaleTimeString() > statusDay?.sunrise) {
+        setStatus("linear-gradient(180deg, #BCE8FF 0%, #FFF 41.26%)");
+        localStorage.setItem("day" , "light")
+      } else if(time.toLocaleTimeString() < statusDay?.sunrise) {
+        setStatus("#1D2837");
+        localStorage.setItem("day" , "night")
       }
     }
+    handleCheckDay();
+  })
 
-    handleSun();
-  }, [])
-  // end find sunrice and sunset
 
   return (
-    <div className="application" style={{ background: 'linear-gradient(180deg, #BCE8FF 0%, #FFF 41.26%)' }}>
-      <Layouts />
-    </div>
+    location.lat === null && location.lng === null ? <p>Wait for a few moments, if your exact location is not determined, turn on your vpn breaker</p> :
+      <Context.Provider value={{ location, setStatusDay, statusDay, time }}>
+        <div className="application" style={{ background: status }}>
+          <Layouts />
+        </div>
+      </Context.Provider>
   )
 }
 

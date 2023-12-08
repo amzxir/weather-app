@@ -5,7 +5,7 @@ export default function Footer() {
         <div className="weather-hours">
             <div className="row">
                 <div className="col-md-3">
-                    <div className="card card-body border-0 shadow-sm text-center">
+                    <div className="card card-body border-0 shadow-sm text-center bg-card">
                         <p className="hours mb-0">9AM</p>
                         <div className="img-center mb-2 mt-2">
                             <img src="/image/rainy.png" alt="" />
@@ -14,7 +14,7 @@ export default function Footer() {
                     </div>
                 </div>
                 <div className="col-md-3">
-                    <div className="card card-body border-0 shadow-sm text-center">
+                    <div className="card card-body border-0 shadow-sm text-center bg-card">
                         <p className="hours mb-0">9AM</p>
                         <div className="img-center mb-2 mt-2">
                             <img src="/image/rainy.png" alt="" />
@@ -23,7 +23,7 @@ export default function Footer() {
                     </div>
                 </div>
                 <div className="col-md-3">
-                    <div className="card card-body border-0 shadow-sm text-center">
+                    <div className="card card-body border-0 shadow-sm text-center bg-card">
                         <p className="hours mb-0">9AM</p>
                         <div className="img-center mb-2 mt-2">
                             <img src="/image/rainy.png" alt="" />
@@ -32,7 +32,7 @@ export default function Footer() {
                     </div>
                 </div>
                 <div className="col-md-3">
-                    <div className="card card-body border-0 shadow-sm text-center">
+                    <div className="card card-body border-0 shadow-sm text-center bg-card">
                         <p className="hours mb-0">9AM</p>
                         <div className="img-center mb-2 mt-2">
                             <img src="/image/rainy.png" alt="" />
