@@ -5,6 +5,7 @@
     min-height: 660px;
     display: grid;
     align-items: center;
+    overflow: auto;
 }
 
 .header {
@@ -15,9 +16,9 @@
     .header-content-city {
         color: #1D2837;
         font-family: sans-serif;
-        font-size: 18px;
+        font-size: 14px;
         font-style: normal;
-        font-weight: 500;
+        font-weight: bold;
         line-height: 20px;
         /* 111.111% */
     }
@@ -26,9 +27,9 @@
         color: #464F5B;
         text-align: right;
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        font-size: 18px;
+        font-size: 14px;
         font-style: normal;
-        font-weight: 400;
+        font-weight: bold;
         line-height: 16px;
         /* 88.889% */
     }
@@ -83,7 +84,7 @@
         color: #737A83;
         text-align: center;
         font-family: sans-serif;
-        font-size: 16px;
+        font-size: 13px;
         font-style: normal;
         font-weight: 600;
         line-height: 20px;
@@ -103,7 +104,7 @@
     .degree {
         color: #737A83;
         font-family: Inter;
-        font-size: 20px;
+        font-size: 14px;
         font-style: normal;
         font-weight: 600;
         line-height: normal;
