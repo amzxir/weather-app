@@ -37,7 +37,7 @@ export default function Body() {
             <div className="img-center">
                 {weather?.weather?.map((i, index) => {
                     return (
-                        <img key={index} src={i.main == "Clouds" ? cloud : i.main == "Clear" ? sunny : i.main == "Rain" ? rainy : ""} alt="" />
+                        <img key={index} src={i.main == "Clouds" ? cloud : i.main == "Clear" ? sunny : i.main == "Rain" ? rainy : i.main == "Haze" ? cloud : ""} alt="" />
                     )
                 })}
             </div>
