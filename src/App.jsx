@@ -49,7 +49,6 @@ export default function App() {
     handleCheckDay();
   })
 
-
   return (
     location.lat === null && location.lng === null ? <p>Wait for a few moments, if your exact location is not determined, turn on your vpn breaker</p> :
       <Context.Provider value={{ location, setStatusDay, statusDay, time }}>
