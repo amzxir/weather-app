@@ -8,16 +8,10 @@ export default function App() {
   const [location, setLocation] = useState({ lat: null, lng: null });
 
   useEffect(() => {
-    if ("geolocation" in navigator) {
-      navigator.geolocation.getCurrentPosition(function (location) {
-        setLocation({
-          latitude: location.coords.latitude,
-          longitude: location.coords.longitude,
-        });
-      });
-    } else {
-      console.log("Geolocation is not available in your browser.");
-    }
+    navigator.geolocation.getCurrentPosition(
+      function(){alert("success")},
+      function(){alert("error")}
+    );
   }, []);
   // end find location user
 
