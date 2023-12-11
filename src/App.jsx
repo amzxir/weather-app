@@ -21,27 +21,6 @@ export default function App() {
   }, []);
   // end find location user
 
-  const options = {
-    enableHighAccuracy: true,
-    timeout: 5000,
-    maximumAge: 0,
-  };
-  
-  function success(pos) {
-    const crd = pos.coords;
-  
-    alert("Your current position is:");
-    alert(`Latitude : ${crd.latitude}`);
-    alert(`Longitude: ${crd.longitude}`);
-  }
-  
-  function error(err) {
-    alert(`ERROR(${err.code}): ${err.message}`);
-  }
-  
-  navigator.geolocation.getCurrentPosition(success, error, options);
-  
-
   // start fetch data staus day
   const [statusDay, setStatusDay] = useState();
   // end fetch data staus day
