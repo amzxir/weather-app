@@ -4,11 +4,24 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + React</title>
-    <script type="module" crossorigin src="/weather-app/assets/index-IDXMWWG1.js"></script>
-    <link rel="stylesheet" crossorigin href="/weather-app/assets/index-04xW7myI.css">
+    <title>Weather-App-Vite</title>
+    <script type="module" crossorigin src="/weather-app/assets/index-1f2LQjzL.js"></script>
+    <link rel="stylesheet" crossorigin href="/weather-app/assets/index-neqbSqdA.css">
   </head>
   <body>
     <div id="root"></div>
+    <script>
+      if ('serviceWorker' in navigator) {
+        // Register a service worker hosted at the root of the
+        // site using the default scope.
+        navigator.serviceWorker.register('/service-worker.js').then(function (registration) {
+          console.log('Service worker registration succeeded:', registration);
+        }, /*catch*/ function (error) {
+          console.log('Service worker registration failed:', error);
+        });
+      } else {
+        console.log('Service workers are not supported.');
+      }
+    </script>
   </body>
 </html>
