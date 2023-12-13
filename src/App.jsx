@@ -35,16 +35,15 @@ export default function App() {
   }, [])
   // end get time 
 
-
   const [status , setStatus] = useState("");
   useEffect(() => {
     const handleCheckDay = async() => {
-      if (time.toLocaleTimeString() > statusDay?.sunrise) {
-        setStatus("linear-gradient(180deg, #BCE8FF 0%, #FFF 41.26%)");
-        import('./scss/styles-light.scss')
-      } else if(time.toLocaleTimeString() < statusDay?.sunrise) {
+      if (statusDay?.sunrise > time.toLocaleTimeString()) {
         setStatus("#1D2837");
         import('./scss/styles-night.scss')
+      } else if( statusDay?.sunrise < time.toLocaleTimeString()) {
+        setStatus("linear-gradient(180deg, #BCE8FF 0%, #FFF 41.26%)");
+        import('./scss/styles-light.scss')
       }
     }
     handleCheckDay();
