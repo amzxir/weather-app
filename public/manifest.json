@@ -1,16 +1,16 @@
 
 {
-  "theme_color": "#22577a",
-  "background_color": "#22577a",
+  "theme_color": "#ffffff",
+  "background_color": "#ffffff",
   "display": "standalone",
   "scope": "/",
   "start_url": ".",
-  "name": "Rasadent",
-  "short_name": "Rasadent",
+  "name": "Weather",
+  "short_name": "Weather",
   "orientation": "any",
   "related_applications": [],
   "prefer_related_applications": true,
-  "description": "Demo PWA for Seller Rasadent feature",
+  "description": "Demo PWA for Seller Weather feature",
   "icons": [
     {
       "src": "/favicon.ico",
