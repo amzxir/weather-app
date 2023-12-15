@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Layouts from './component/layouts';
 import Context from './context/context';
+import Load from './component/load';
 
 export default function App() {
 
@@ -50,7 +51,7 @@ export default function App() {
   })
 
   return (
-    location.lat === null && location.lng === null ? <p>Wait for a few moments, if your exact location is not determined, turn on your vpn breaker</p> :
+    location.lat === null && location.lng === null ? <Load/> :
       <Context.Provider value={{ location, setStatusDay, statusDay, time }}>
         <div className="application" style={{ background: status }}>
           <Layouts />
